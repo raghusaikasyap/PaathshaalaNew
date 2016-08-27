@@ -24,14 +24,18 @@ cellspacing="2">
 <td><input type="text" name="fathername" id="fathername"
 size="30"></td>
 </tr>
+<tr>
 <td>Mother Name</td>
 <td><input type="text" name="fathername" id="fathername"
 size="30"></td>
 </tr>
 <tr>
-<tr>
 <td>DOB</td>
 <td><input type="text" name="dob" id="dob" size="30"></td>
+</tr>
+<tr>
+<td>Aadhar Id</td>
+<td><input type="text" name="Aadhar" id="Aadhar" size="30"></td>
 </tr>
 <tr>
 <td>Gender</td>
@@ -86,52 +90,52 @@ cellspacing="2">
 <h5>Subject Wise Perfomance</h5>
 <tr>
 <td>Telugu</td>
-<td><input type="radio" name="Telugu" value="poor" size="10">Poor
-&nbsp; <input type="radio" name="sGender" value="average" size="10">Average &nbsp;
+<td><input type="radio" name="Telugu" value="poor" size="10">Poor&nbsp;
+<input type="radio" name="sGender" value="average" size="10">Average &nbsp;
 <input type="radio" name="Telugu" value="aboveaverage" size="10">Above Average &nbsp;
-&nbsp; <input type="radio" name="sGender" value="Excellent" size="10">Excellent</td>
+<input type="radio" name="Telugu" value="Excellent" size="10">Excellent</td>
 </tr>
 <tr>
 <td>Hindi</td>
-<td><input type="radio" name="Telugu" value="poor" size="10">Poor
-&nbsp; <input type="radio" name="sGender" value="average" size="10">Average &nbsp;
-<input type="radio" name="Telugu" value="aboveaverage" size="10">Above Average &nbsp;
-&nbsp; <input type="radio" name="sGender" value="Excellent" size="10">Excellent</td>
+<td><input type="radio" name="Hindi" value="poor" size="10">Poor&nbsp;
+<input type="radio" name="Hindi" value="average" size="10">Average &nbsp;
+<input type="radio" name="Hindi" value="aboveaverage" size="10">Above Average &nbsp;
+<input type="radio" name="Hindi" value="Excellent" size="10">Excellent</td>
 </tr>
 <tr>
 <td>English</td>
-<td><input type="radio" name="Telugu" value="poor" size="10">Poor
-&nbsp; <input type="radio" name="sGender" value="average" size="10">Average &nbsp;
-<input type="radio" name="Telugu" value="aboveaverage" size="10">Above Average &nbsp;
-&nbsp; <input type="radio" name="sGender" value="Excellent" size="10">Excellent</td>
+<td><input type="radio" name="English" value="poor" size="10">Poor&nbsp; 
+<input type="radio" name="English" value="average" size="10">Average &nbsp;
+<input type="radio" name="English" value="aboveaverage" size="10">Above Average &nbsp;
+<input type="radio" name="English" value="Excellent" size="10">Excellent</td>
 </tr>
 <tr>
 <td>Mathematics</td>
-<td><input type="radio" name="Telugu" value="poor" size="10">Poor
-&nbsp; <input type="radio" name="sGender" value="average" size="10">Average &nbsp;
-<input type="radio" name="Telugu" value="aboveaverage" size="10">Above Average &nbsp;
-&nbsp; <input type="radio" name="sGender" value="Excellent" size="10">Excellent</td>
+<td><input type="radio" name="Mathematics" value="poor" size="10">Poor &nbsp; 
+<input type="radio" name="Mathematics" value="average" size="10">Average &nbsp;
+<input type="radio" name="Mathematics" value="aboveaverage" size="10">Above Average &nbsp;
+<input type="radio" name="Mathematics" value="Excellent" size="10">Excellent</td>
 </tr>
 <tr>
 <td>Science</td>
-<td><input type="radio" name="Telugu" value="poor" size="10">Poor
-&nbsp; <input type="radio" name="sGender" value="average" size="10">Average &nbsp;
-<input type="radio" name="Telugu" value="aboveaverage" size="10">Above Average &nbsp;
-&nbsp; <input type="radio" name="sGender" value="Excellent" size="10">Excellent</td>
+<td><input type="radio" name="Science" value="poor" size="10">Poor &nbsp;
+<input type="radio" name="Science" value="average" size="10">Average &nbsp;
+<input type="radio" name="Science" value="aboveaverage" size="10">Above Average &nbsp;
+<input type="radio" name="Science" value="Excellent" size="10">Excellent</td>
 </tr>
 <tr>
 <td>Social</td>
-<td><input type="radio" name="Telugu" value="poor" size="10">Poor
-&nbsp; <input type="radio" name="sGender" value="average" size="10">Average &nbsp;
-<input type="radio" name="Telugu" value="aboveaverage" size="10">Above Average &nbsp;
-&nbsp; <input type="radio" name="sGender" value="Excellent" size="10">Excellent</td>
+<td><input type="radio" name="Social" value="poor" size="10">Poor &nbsp;
+<input type="radio" name="Social" value="average" size="10">Average &nbsp;
+<input type="radio" name="Social" value="aboveaverage" size="10">Above Average &nbsp;
+<input type="radio" name="Social" value="Excellent" size="10">Excellent</td>
 </tr>
 <tr>
 <td>Overall Perfomance</td>
-<td><input type="radio" name="Telugu" value="poor" size="10">Poor
-&nbsp; <input type="radio" name="sGender" value="average" size="10">Average &nbsp;
-<input type="radio" name="Telugu" value="aboveaverage" size="10">Above Average &nbsp;
-&nbsp; <input type="radio" name="sGender" value="Excellent" size="10">Excellent</td>
+<td><input type="radio" name="OvPerfomance" value="poor" size="10">Poor
+&nbsp; <input type="radio" name="OvPerfomance" value="average" size="10">Average &nbsp;
+<input type="radio" name="OvPerfomance" value="aboveaverage" size="10">Above Average &nbsp;
+&nbsp; <input type="radio" name="OvPerfomance" value="Excellent" size="10">Excellent</td>
 </tr>
 </table>
 </div>
@@ -140,14 +144,14 @@ cellspacing="2">
 <table cellpadding="2" width="20%" bgcolor="99FFFF" align="center"
 cellspacing="2">
 <tr>
-<td><input type="textbox" name="hobbies" id="hobbies" size="50">Hobbies
+<td><input type="text" name="hobbies" id="hobbies" size="60">Hobbies
 </td></tr>
 <tr>
-<td><input type="textbox" name="Sports" id="Sports" size="50">Sports
+<td><input type="text" name="Sports" id="Sports" size="60">Sports
 </td>
 </tr>
 <tr>
-<td><input type="textbox" name="Literature" id="Literature" size="50">Literature
+<td><input type="textbox" name="Literature" id="Literature" size="60">Literature
 </td>
 </tr>
 <tr>
