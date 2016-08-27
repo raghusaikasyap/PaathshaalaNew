@@ -36,7 +36,6 @@ public interface IParentRole extends ISchoolRoleSet
 	 */
 	@Override
 	default String getAadharId() {
-		// TODO Auto-generated method stub
 		return StringUtils.emptyString();
 	}
 	
