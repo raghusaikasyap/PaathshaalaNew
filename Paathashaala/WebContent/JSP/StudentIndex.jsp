@@ -15,7 +15,8 @@ cellspacing="2">
 <tr>
 <td>First Name</td>
 <td><input type=text name="Firstname" id="Firstname" size="30">&nbsp;</td>
-&nbsp; &nbsp;
+</tr>
+<tr>
 <td>Last Name</td>
 <td><input type=text name="Firstname" id="Firstname" size="30">&nbsp;</td>
 </tr>
@@ -84,9 +85,17 @@ id="City" size="30"></td>
 cellspacing="2">
 <tr>
 <td>Standard</td>
-<td><input type=text  name="Standard" id="Standard"  size="20">
+<td><input type=text  name="Standard" id="Standard"  size="60">
 </td>
 <tr>
+<td>Roll No</td>
+<td><input type=text  name="RollNo" id="RollNo"  size="60">
+</td>
+<tr>
+<tr>
+<td>Section</td>
+<td><input type=text  name="Section" id="Section"  size="60">
+</td>
 <h5>Subject Wise Perfomance</h5>
 <tr>
 <td>Telugu</td>
@@ -143,19 +152,21 @@ cellspacing="2">
 <h4>Co-Circular Activities</h4>
 <table cellpadding="2" width="20%" bgcolor="99FFFF" align="center"
 cellspacing="2">
-<tr>
-<td><input type="text" name="hobbies" id="hobbies" size="60">Hobbies
+<tr><td>Hobbies</td>
+<td><input type="text" name="hobbies" id="hobbies" size="60">
 </td></tr>
-<tr>
-<td><input type="text" name="Sports" id="Sports" size="60">Sports
+<tr><td>Sports</td>
+<td><input type="text" name="Sports" id="Sports" size="60">
 </td>
 </tr>
 <tr>
-<td><input type="textbox" name="Literature" id="Literature" size="60">Literature
+<td>Literature</td>
+<td input type="textbox" name="Literature" id="Literature" size="60">
 </td>
 </tr>
 <tr>
-<td><input type="textbox" name="Arts" id="Arts" size="50">Arts
+<td>Arts</td>
+<td><input type="textbox" name="Arts" id="Arts" size="60">
 </td>
 </tr>
 </table>
