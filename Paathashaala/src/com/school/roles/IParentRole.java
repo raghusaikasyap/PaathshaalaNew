@@ -18,7 +18,6 @@ public interface IParentRole extends ISchoolRoleSet
 	 */
 	@Override
 	default String getAddress() {
-		// TODO Auto-generated method stub
 		return StringUtils.emptyString();
 	}
 	
@@ -27,7 +26,6 @@ public interface IParentRole extends ISchoolRoleSet
 	 */
 	@Override
 	default int getId() {
-		
 		return 0;
 	}
 	
