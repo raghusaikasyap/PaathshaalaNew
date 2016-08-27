@@ -161,7 +161,7 @@ cellspacing="2">
 </tr>
 <tr>
 <td>Literature</td>
-<td input type="textbox" name="Literature" id="Literature" size="60">
+<td><input type="textbox" name="Literature" id="Literature" size="60">
 </td>
 </tr>
 <tr>
