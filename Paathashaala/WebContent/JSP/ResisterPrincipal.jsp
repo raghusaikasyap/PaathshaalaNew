@@ -45,23 +45,27 @@
 						<input type="text" class="form-control" placeholder="Enter your work experience in years" />
 					</div>
 				</div>				
-				<div class="form-group">
+				<div class="form-group" id="enumSchool">
 					<label>Previous Worked Schools</label>
 					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Enter your previous schools" />
+						<div id="divEnumSchool">
+							<input type="text" class="form-control" id="inEnumSchool" placeholder="Enter your previous schools" />
+						</div>
 						 <span class="input-group-btn">
-        					<button type="button" class="btn btn-default">
+        					<button type="button" class="btn btn-default" id="btnEnumSchool">
   								<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add another school
 							</button>
    						</span>
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="form-group" id="enumSubject">
 					<label>Known Subjects</label>
 					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Enter your known subjects" />
+						<div id="divEnumSubject">
+							<input type="text" class="form-control" id="inEnumSubject" placeholder="Enter your known subjects" />
+						</div>
 						 <span class="input-group-btn">
-        					<button type="button" class="btn btn-default">
+        					<button type="button" class="btn btn-default" id="btnEnumSubject">
   								<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add another subject
 							</button>
    						</span>
@@ -73,8 +77,8 @@
 		</form>
 	</div>
 </div>
-
-<script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../jquery/jquery.min.js"></script>
+<script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../utility/Utilities.js"></script>
 </body>
 </html>
