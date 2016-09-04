@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>School Registration</title>
+<link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<h1 class="well">School Registration Page</h1>
+<div class="col-lg-12 well">
+	<div class="row">
+		<form name="schoolRegPage" action="regSchool.jsp">
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label>School Name</label>
+						<input type="text" class="form-control" name="schName" placeholder="Enter your school name" required/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 form-group">					
+						<label>Address</label>
+						<textarea rows="4" class="form-control" name="schAddress" placeholder="Enter your school address" required></textarea>
+				</div>
+				<div class="col-sm-6 form-group">					
+						<label>Establishment Year</label>
+						<input type="text" class="form-control" name="schEstdYear" placeholder="Enter your school establishment year" required />
+				</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label>Email ID</label>
+						<input type="text" class="form-control" name="schEmail" placeholder="Enter your school Email address" required/>
+					</div>
+					<div class="col-sm-6 form-group">
+						<label>Phone Number</label>
+						<input type="text" class="form-control" name="schPhone" placeholder="Enter your school phone number" required/>
+					</div>
+				</div>	
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label>School Registration ID</label>
+						<input type="text" class="form-control" name="schRegID" placeholder="Enter your school Registration ID" required/>
+					</div>
+					<div class="col-sm-6 form-group">
+						<label>Current Student Strength</label>
+						<input type="text" class="form-control" name="schStuStrength" placeholder="Enter your school's student strength" required/>
+					</div>
+				</div>	
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label>Standard/Curriculum followed</label>
+						<input type="text" class="form-control" name="schSyllabusFollowed" placeholder="SSC/CBSE/ICSE" required/>
+					</div>
+					<div class="col-sm-6 form-group">
+						<label>School logo</label>
+						<input name="schLogo" type="file" class="file" accept="image/*" />
+					</div>
+				</div>						
+			</div>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label>School Chairman Name</label>
+						<input type="text" class="form-control" name="schChairmanName" placeholder="Chaiman/Director/HeadMaster" required/>
+					</div>
+					<div class="col-sm-6 form-group">
+						<label>School Chairman Address</label>
+						<input type="text" class="form-control" name="schChairmanAddress" placeholder="Chaiman/Director/HeadMaster Permanent Address" required/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label>School Chairman Qualifications</label>
+						<input type="text" class="form-control" name="schChairmanQualifications" placeholder="Chaiman/Director/HeadMaster Qualifications" required/>
+					</div>
+					<div class="col-sm-6 form-group">
+						<label>School Chairman Aadhaar ID</label>
+						<input type="text" class="form-control" name="schChairmanAadhaarID" placeholder="Chaiman/Director/HeadMaster Aadhaar ID" required/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label>School Chairman Contact Number</label>
+						<input type="text" class="form-control" name="schChairmanPhone" placeholder="Chaiman/Director/HeadMaster Phone Number" required/>
+					</div>
+					<div class="col-sm-6 form-group">
+						<label>School Chairman Email ID</label>
+						<input type="text" class="form-control" name="schChairmanEmail" placeholder="Chaiman/Director/HeadMaster Email ID" required/>
+					</div>
+				</div>				
+			</div>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary form-control">Register school</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<script src="../jquery/jquery.min.js"></script>
+<script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

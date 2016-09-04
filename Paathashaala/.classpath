@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="WebContent"/>
+	<classpathentry kind="src" path="resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/raghu/OneDrive/Documents/GitHub/PaathshaalaGit/PaathshaalaNew/dependentLibs/postgresql-9.4.1209.jre6.jar"/>
 	<classpathentry kind="lib" path="C:/Tomcat/lib/annotations-api.jar"/>
@@ -25,5 +26,8 @@
 	<classpathentry kind="lib" path="C:/Tomcat/lib/tomcat-jdbc.jar"/>
 	<classpathentry kind="lib" path="C:/Tomcat/lib/tomcat-util.jar"/>
 	<classpathentry kind="lib" path="C:/Tomcat/lib/websocket-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/raghu/OneDrive/Documents/GitHub/PaathshaalaGit/PaathshaalaNew/dependentLibs/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/raghu/OneDrive/Documents/GitHub/PaathshaalaGit/PaathshaalaNew/dependentLibs/postgresql-9.4.1208.jar"/>
+	<classpathentry kind="lib" path="C:/Users/raghu/OneDrive/Documents/GitHub/PaathshaalaGit/PaathshaalaNew/dependentLibs/postgresql-9.4.1208.jre7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

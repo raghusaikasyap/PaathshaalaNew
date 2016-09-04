@@ -1,6 +1,5 @@
 package com.school.dal.db.connection;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
@@ -8,21 +7,34 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
+
 public class PostgresConnection implements IDbConnection
 {
+	private static final Logger LOGGER = Logger.getLogger(PostgresConnection.class);
+	
 	public Connection getConnection() 
 	{
 		Connection conn = null;
 		String url = "jdbc:postgresql://localhost/Paathshaala";
+		LOGGER.info("Getting the connection properties..");
 		Properties props = getPropertiesFromFile();
 		props.setProperty("user",props.getProperty("username"));
 		props.setProperty("password",props.getProperty("password"));
-		//props.setProperty("ssl","true");
 		try {
+			Class.forName("org.postgresql.Driver");
 			conn = DriverManager.getConnection(url, props);
+			LOGGER.info("Connection to DB successful.");
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//Log the error
+			LOGGER.error("Creating a connection to database failed.");
+			LOGGER.error("Error code: " + e.getErrorCode() + "Error state " + e.getSQLState());
+			LOGGER.error("Error message: " + e.getMessage());
+			LOGGER.error("StackTrace: ", e);
+		} catch (ClassNotFoundException e) {
+			LOGGER.error("Could not find suitable database driver.");
+			LOGGER.error("Error message: " + e.getMessage());
+			LOGGER.error("StackTrace: ", e);
 		}
 		return conn;
 	}
@@ -37,11 +49,13 @@ public class PostgresConnection implements IDbConnection
 		InputStream input = null;
 		Properties prop = new Properties();
 		try {
-			input = new FileInputStream("Connection.properties");
+			input = PostgresConnection.class.getResourceAsStream("/Connection.properties");
 			prop.load(input);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//Log the error
+			LOGGER.error("Could not read the connection properties.");
+			LOGGER.error("Error message: " + e.getMessage());
+			LOGGER.error("StackTrace: ", e);
 		}
 		return prop;		
 	}

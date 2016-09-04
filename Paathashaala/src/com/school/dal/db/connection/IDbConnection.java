@@ -7,4 +7,5 @@ public interface IDbConnection
 	public Connection getConnection();
 	
 	public DbType getDbType();
+	
 }
