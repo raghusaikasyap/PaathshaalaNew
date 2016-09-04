@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>School Registration</title>
 <link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../bootstrap/dist/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 </head>
 <body>
 <h1 class="well">School Registration Page</h1>
@@ -23,8 +24,13 @@
 						<textarea rows="4" class="form-control" name="schAddress" placeholder="Enter your school address" required></textarea>
 				</div>
 				<div class="col-sm-6 form-group">					
-						<label>Establishment Year</label>
-						<input type="text" class="form-control" name="schEstdYear" placeholder="Enter your school establishment year" required />
+					<label for="estdYear">Date of Establishment</label>
+                		<div class="input-group date form_date col-md-5 " data-date="" data-date-format="dd MM yyyy" data-link-field="estdYear" data-link-format="yyyy-mm-dd">
+                    		<input class="form-control" size="16" name="schEstdYr" type="text" value="" readonly>
+                    			<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+								<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                		</div>
+					<input type="hidden" id="estdYear" value="" /><br/>
 				</div>
 				</div>
 				
@@ -103,5 +109,17 @@
 </div>
 <script src="../jquery/jquery.min.js"></script>
 <script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../bootstrap/dist/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript">
+$('.form_date').datetimepicker({
+    weekStart: 1,
+    todayBtn:  1,
+	autoclose: 1,
+	todayHighlight: 1,
+	startView: 2,
+	minView: 2,
+	forceParse: 0
+});
+</script>
 </body>
 </html>
