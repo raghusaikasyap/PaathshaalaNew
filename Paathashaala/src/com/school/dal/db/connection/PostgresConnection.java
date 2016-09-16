@@ -59,4 +59,10 @@ public class PostgresConnection implements IDbConnection
 		}
 		return prop;		
 	}
+	
+	public static void main(String[] args) {
+		
+		PostgresConnection c = new PostgresConnection();
+		c.getConnection();
+	}
 }

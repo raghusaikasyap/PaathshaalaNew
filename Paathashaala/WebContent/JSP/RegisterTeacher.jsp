@@ -94,7 +94,7 @@
 						</div>
 					</div>				
 				</div>
-			</div>
+			</div><p></p>
 			<div class="form-group" id="enumSchool">
 					<label>Previously Worked Schools</label>
 					<div class="input-group">
@@ -111,16 +111,23 @@
 			<div class="form-group" id="enumHobby">
 					<label>Subjects Handled</label>
 					<div class="input-group">
-						<div id="divEnumHobbies">
-							<input type="text" class="form-control" id="inEnumHobbies" placeholder="Enter your hobbies" />
+						<div id="divEnumSubjectsHandled">
+							<input type="text" class="form-control" id="inEnumSubjectsHandled" placeholder="Enter the subjects you have handled" />
 						</div>
 						 <span class="input-group-btn">
-        					<button type="button" class="btn btn-default" id="btnEnumHobbies">
+        					<button type="button" class="btn btn-default" id="btnEnumsubjectsHandled">
   								<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add another Hobby
 							</button>
    						</span>
 					</div>
-			</div>	
+			</div>
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							
+							<input type="checkbox" name="classteacher"  />I am a Class Teacher<br>
+						</div>
+					</div>
+				
 			<div>						
 				<button type="button" class="btn btn-default">Register me</button>					
 			</div>
