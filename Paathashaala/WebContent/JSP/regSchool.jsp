@@ -1,3 +1,5 @@
+<%@page import="java.io.InputStream"%>
+<%@page import="java.io.FileInputStream"%>
 <%@page import="com.school.dal.db.execute.CreateSchool"%>
 <%@page import="java.util.Map"%>
 <%@page import="java.util.HashMap"%>
@@ -12,7 +14,8 @@
 <body>
 <%
 	Map<String, String[]> paramMap = request.getParameterMap();
-	CreateSchool.createSchoolEntry(paramMap);
+	InputStream fin = request.getInputStream();
+	CreateSchool.createSchoolEntry(paramMap, fin);
 %>
 </body>
 </html>
