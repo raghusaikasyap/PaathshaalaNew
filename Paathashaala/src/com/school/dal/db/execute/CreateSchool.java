@@ -3,6 +3,7 @@ package com.school.dal.db.execute;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Map;
 
@@ -15,9 +16,10 @@ public class CreateSchool {
 
 	private static final Logger LOGGER = Logger.getLogger(CreateSchool.class);
 	
-	public static void createSchoolEntry(Map<String, String[]> paramMap, InputStream schoolLogo) {
+	public static boolean createSchoolEntry(Map<String, String[]> paramMap, InputStream schoolLogo) {
 		IDbConnection iConn = new PostgresConnection();
 		Connection conn = null;
+		boolean hasErrors = false;
 		try {
 			conn = iConn.getConnection();
 			PreparedStatement ps = conn.prepareStatement("insert into \"School_Details\"(school_name, school_address, school_email, school_phone, school_estdyear, school_regid, school_studentstrength, school_syllabusfollowed, school_logo, school_chairmanname, school_chairmanaddress, school_chairmanqualification, school_chairmanaadhaarid, school_chairmanphone, school_chairmanemialid) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
@@ -26,6 +28,7 @@ public class CreateSchool {
 			ps.setBinaryStream(9, schoolLogo, schoolLogo.available());			
 			ps.executeUpdate();
 		} catch (Exception e) {
+			hasErrors = true;
 			if (e instanceof SQLException) {
 				//Log the error
 				LOGGER.error("Error code: " + ((SQLException) e).getErrorCode() + "Error state " + ((SQLException) e).getSQLState());
@@ -48,6 +51,7 @@ public class CreateSchool {
 				LOGGER.error("StackTrace: ", e);
 			}
 		}
+		return hasErrors;
 	}
 
 	private static PreparedStatement constructQueryString(Map<String, String[]> paramMap, PreparedStatement ps) {
@@ -90,5 +94,43 @@ public class CreateSchool {
 			LOGGER.error(e.getMessage(), e);
 		}
 		return ps;
+	}
+	
+	public static boolean isSchoolEntryPresent()
+	{
+		IDbConnection iConn = new PostgresConnection();
+		Connection conn = null;
+		int count =0;
+		try {
+			conn = iConn.getConnection();
+			PreparedStatement ps = conn.prepareStatement("select count(*) from \"School_Details\"");
+			ResultSet rs = ps.executeQuery();
+			if(rs.next()) {
+				count = rs.getInt(1);
+			}
+		} catch(SQLException e) {
+			if (e instanceof SQLException) {
+				//Log the error
+				LOGGER.error("Error code: " + ((SQLException) e).getErrorCode() + "Error state " + ((SQLException) e).getSQLState());
+				LOGGER.error("Error message: " + e.getMessage());
+				LOGGER.error("StackTrace: ", e);
+			} else {
+				LOGGER.error("Unexpected Exception");
+				LOGGER.error("StackTrace: ", e);
+			}	
+		} finally {
+			try {
+				LOGGER.info("Closing the DB connection.");
+				conn.close();
+				LOGGER.info("Closed the DB connection.");
+			} catch (SQLException e) {
+				//Log the error
+				LOGGER.error("Closing database connection failed.");
+				LOGGER.error("Error code: " + ((SQLException) e).getErrorCode() + "Error state " + ((SQLException) e).getSQLState());
+				LOGGER.error("Error message: " + e.getMessage());
+				LOGGER.error("StackTrace: ", e);
+			}
+		}
+		return count > 0;		
 	}
 }

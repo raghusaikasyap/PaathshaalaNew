@@ -13,9 +13,19 @@
 </head>
 <body>
 <%
-	Map<String, String[]> paramMap = request.getParameterMap();
-	InputStream fin = request.getInputStream();
-	CreateSchool.createSchoolEntry(paramMap, fin);
+	if(!CreateSchool.isSchoolEntryPresent()) {
+		Map<String, String[]> paramMap = request.getParameterMap();
+		InputStream fin = request.getInputStream();
+		boolean hasErrors = CreateSchool.createSchoolEntry(paramMap, fin);
+		if(hasErrors) {
+			request.getRequestDispatcher("/JSP/Error.html");
+		} else {
+			request.getRequestDispatcher("/JSP/home.jsp").forward(request, response);
+		}
+	} else {
+		request.getRequestDispatcher("/JSP/home.jsp").forward(request, response);
+	}
+	
 %>
 </body>
 </html>
