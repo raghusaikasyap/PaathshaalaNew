@@ -1,12 +1,9 @@
 package com.school.dal.db.execute;
 
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
@@ -23,8 +20,7 @@ public class CreateSchool {
 		Connection conn = null;
 		try {
 			conn = iConn.getConnection();
-			Statement stmt = conn.createStatement();
-			PreparedStatement ps = conn.prepareStatement("insert into public.School_Details(school_name, school_address, school_email, school_phone, school_estdyear, school_regid, school_studentstrength, school_syllabusfollowed, school_logo, school_chairmanname, school_chairmanaddress, school_chairmanqualification, school_chairmanaadhaarid, school_chairmanphone, school_chairmanemialid) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+			PreparedStatement ps = conn.prepareStatement("insert into \"School_Details\"(school_name, school_address, school_email, school_phone, school_estdyear, school_regid, school_studentstrength, school_syllabusfollowed, school_logo, school_chairmanname, school_chairmanaddress, school_chairmanqualification, school_chairmanaadhaarid, school_chairmanphone, school_chairmanemialid) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 			//TODO - Null check for file.
 			ps = constructQueryString(paramMap, ps);
 			ps.setBinaryStream(9, schoolLogo, schoolLogo.available());			
