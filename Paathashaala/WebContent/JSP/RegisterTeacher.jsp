@@ -124,7 +124,7 @@
 					<div class="row">
 						<div class="col-sm-6 form-group">
 							
-							<input type="checkbox" name="classteacher"  />I am a Class Teacher<br>
+							<input type="checkbox" name="classteacher"  /> I am a Class Teacher<br>
 						</div>
 					</div>
 				
