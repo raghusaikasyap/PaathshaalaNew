@@ -1,3 +1,5 @@
+<%@page import="java.io.InputStream"%>
+<%@page import="java.io.FileInputStream"%>
 <%@page import="com.school.dal.db.execute.CreateSchool"%>
 <%@page import="java.util.Map"%>
 <%@page import="java.util.HashMap"%>
@@ -11,8 +13,19 @@
 </head>
 <body>
 <%
-	Map<String, String[]> paramMap = request.getParameterMap();
-	CreateSchool.createSchoolEntry(paramMap);
+	if(!CreateSchool.isSchoolEntryPresent()) {
+		Map<String, String[]> paramMap = request.getParameterMap();
+		InputStream fin = request.getInputStream();
+		boolean hasErrors = CreateSchool.createSchoolEntry(paramMap, fin);
+		if(hasErrors) {
+			request.getRequestDispatcher("/JSP/Error.html");
+		} else {
+			request.getRequestDispatcher("/JSP/home.jsp").forward(request, response);
+		}
+	} else {
+		request.getRequestDispatcher("/JSP/home.jsp").forward(request, response);
+	}
+	
 %>
 </body>
 </html>
