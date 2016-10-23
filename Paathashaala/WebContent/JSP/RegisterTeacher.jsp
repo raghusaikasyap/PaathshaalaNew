@@ -6,12 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Teacher Registration</title>
 <link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../bootstrap/dist/css/bootstrap-datetimepicker.min.css"
+	rel="stylesheet" media="screen">
 </head>
 <body>
 	<h1 class="well">Teacher Registration Page</h1>
 	<div class="col-lg-12 well">
 		<div class="row">
-			<form name="teacherRegPage">
+			<form name="teacherRegPage" action="teacherRegister.jsp">
 				<div class="col-sm-12">
 					<div class="row">
 						<div class="col-sm-6 form-group">
@@ -48,7 +50,7 @@
 							<div class="col-sm-6 form-group">
 								<label for="teacherDOB">Date of Birth</label>
 								<div class="input-group date form_date col-md-5 " data-date=""
-									data-date-format="dd MM yyyy" data-link-field="estdYear"
+									data-date-format="dd MM yyyy" data-link-field="teacherDOB"
 									data-link-format="yyyy-mm-dd">
 									<input class="form-control" size="16" name="teacherDOBName"
 										type="text" value="" readonly> <span
@@ -76,7 +78,7 @@
 							<div class="col-sm-12 form-group">
 								<label>Present Address</label>
 								<textarea rows="4" class="form-control"
-									onchange="addressChanged()" name="presentadd"
+									onkeyup="addressChanged()" name="presentadd"
 									placeholder="Enter your present address"></textarea>
 							</div>
 						</div>
@@ -148,16 +150,22 @@
 						</span>
 					</div>
 				</div>
-				<div class="row">
+
+				<!-- <div class="row">
 					<div class="col-sm-6 form-group">
 
 						<input type="checkbox" name="classteacher" /> I am a Class
 						Teacher<br>
 					</div>
-				</div>
+				</div> -->
 
-				<div>
-					<button type="button" class="btn btn-default">Register me</button>
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary form-control">Register
+								Teacher</button>
+						</div>
+					</div>
 				</div>
 			</form>
 		</div>
@@ -166,7 +174,18 @@
 	<script src="../bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript"
 		src="../bootstrap/dist/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+
 	<script type="text/javascript">
+		$('.form_date').datetimepicker({
+			weekStart : 1,
+			todayBtn : 1,
+			autoclose : 1,
+			todayHighlight : 1,
+			startView : 2,
+			minView : 2,
+			forceParse : 0
+		});
+		
 		function addressSame() {
 			if (document.forms["teacherRegPage"]["paddress"].value) {
 				document.forms["teacherRegPage"]["permanentadd"].value = document.forms["teacherRegPage"]["presentadd"].value;
