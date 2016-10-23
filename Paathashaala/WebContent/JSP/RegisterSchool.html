@@ -125,7 +125,7 @@ function validateForm() {
     var atrate = email.indexOf("@");
     var com = email.lastIndexOf(".");
     if (atrate < 1 || com < atrate + 2) {
-        $('#schEmailID').css('border-color', 'red');
+        //$('#schEmailID').css('border-color', 'red');
         return false;
     }
 }

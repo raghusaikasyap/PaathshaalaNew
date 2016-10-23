@@ -1,3 +1,4 @@
+<%@page import="com.school.dal.db.execute.CreateSchool"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -7,6 +8,12 @@
 <title>HomePage</title>
 </head>
 <body>
-TODO - Implement the landing page!
+<%
+	if(!CreateSchool.isSchoolEntryPresent()) {
+		request.getRequestDispatcher("/RegisterSchool.html").forward(request, response);
+	} else {
+		
+	}
+%>
 </body>
 </html>
