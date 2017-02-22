@@ -10,7 +10,7 @@
 <body>
 <%
 	if(!CreateSchool.isSchoolEntryPresent()) {
-		request.getRequestDispatcher("/RegisterSchool.html").forward(request, response);
+		request.getRequestDispatcher("/JSP/RegisterSchool.html").forward(request, response);
 	} else {
 		
 	}

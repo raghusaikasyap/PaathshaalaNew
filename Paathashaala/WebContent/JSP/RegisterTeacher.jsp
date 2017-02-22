@@ -17,23 +17,23 @@
 				<div class="col-sm-12">
 					<div class="row">
 						<div class="col-sm-6 form-group">
-							<label>First Name</label> <input type="text" class="form-control"
+							<label>First Name</label> <input type="text" name="first_name" class="form-control"
 								placeholder="First Name" required />
 						</div>
 						<div class="col-sm-6 form-group">
-							<label>Last Name</label> <input type="text" class="form-control"
+							<label>Last Name</label> <input type="text" name="last_name" class="form-control"
 								placeholder="Last Name" required />
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-6 form-group">
 							<label>Father Name</label> <input type="text"
-								class="form-control" placeholder="Enter your Father's Name"
+								class="form-control" name="father_name" placeholder="Enter your Father's Name"
 								required />
 						</div>
 						<div class="col-sm-6 form-group">
 							<label>Mother Name</label> <input type="text"
-								class="form-control" placeholder="Enter your Mother's name"
+								class="form-control" name="mother_name" placeholder="Enter your Mother's name"
 								required />
 						</div>
 					</div>
@@ -42,10 +42,13 @@
 					<div class="col-sm-12 ">
 						<div class="row">
 							<div class="col-sm-12 form-group">
-								<label>Gender</label> : <input type="radio" name="gender"
-									value="male"> Male &nbsp;<input type="radio"
-									name="gender" value="female"> Female &nbsp;<input
-									type="radio" name="gender" value="other"> Other
+								<label>Gender</label> : 
+								<label class="radio-inline"><input type="radio" name="gender"
+									value="male"> Male </label>
+									<label class="radio-inline"><input type="radio"
+									name="gender" value="female"> Female </label>
+									<label class="radio-inline"><input
+									type="radio" name="gender" value="other"> Other</label>
 							</div>
 							<div class="col-sm-6 form-group">
 								<label for="teacherDOB">Date of Birth</label>
@@ -62,7 +65,7 @@
 								<input type="hidden" id="teacherDOB" value="" /><br />
 							</div>
 							<div class="col-sm-6 form-group">
-								<label>Aadhaar Number</label> <input type="text"
+								<label>Aadhaar Number</label> <input type="text" name="aadhaar_id"
 									class="form-control" placeholder="Enter your UID Aadhar Number" />
 							</div>
 							<div class="col-sm-12 form-group">
